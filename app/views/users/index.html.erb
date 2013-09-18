@@ -1,12 +1,15 @@
 <h1>All Users:</h1>
 <% if @users %>
-  <table>
+  <table border="1">
     <tr>
       <th>Name</th>
       <th>Email</th>
     </tr>
   <% @users.each do |user| %>
-    <%= user.name %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+    </tr>
   <% end %>
   </table>
 <% end %>
