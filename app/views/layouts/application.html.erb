@@ -8,6 +8,17 @@
 </head>
 <body>
 
+<% if current_user? %>
+  <div>Welcome, <%= current_user.name %><div>
+  <div><%= link_to "Signout", signout_path %></div>
+<% else %>
+  <div>
+    <%= link_to "Signup", signup_path %> |
+    <%= link_to "Signin", signin_path %>
+  </div>
+<% end %>
+
+
 <%= notice %>
 <%= alert %>
 <br>

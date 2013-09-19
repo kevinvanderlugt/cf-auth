@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
 
   def destroy
     if session[:user_id].present?
-      session.delete(:user_id)
+      session[:user_id] = nil
       flash[:alert] = "You have been signed out!"
     end
     redirect_to root_url
