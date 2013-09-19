@@ -1,6 +1,6 @@
 UserRegistration::Application.routes.draw do
   resources :users
-  resources :sessions, only: [:create]
+  resources :sessions, only: [:create, :destroy]
 
   get "/home" => "static_pages#home"
   get "/secret" => "static_pages#secret"
